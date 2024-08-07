@@ -12,6 +12,8 @@ tourDescription = """
 .
 """
 
+tourInstructions = "."
+
 #
 # Globals
 #
