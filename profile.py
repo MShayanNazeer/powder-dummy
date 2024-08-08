@@ -23,7 +23,7 @@ class GLOBALS(object):
     UBUNTU22_IMG = "urn:publicid:IDN+utah.cloudlab.us+image+insaneproject-PG0:Ubuntu22.04-DPDK22.11"
 
     # default type
-    HWTYPE = "d710"
+    HWTYPE = "d430"
     # SCRIPT_DIR = "/local/repository/scripts/"
     # SCRIPT_CONFIG = "setup-config"
 
@@ -49,7 +49,7 @@ request = pc.makeRequestRSpec()
 
 # Optional physical type for all nodes.
 pc.defineParameter("phystype",  "Optional physical node type",
-                   portal.ParameterType.STRING, "d710",
+                   portal.ParameterType.STRING, "d430",
                    longDescription="Specify a physical node type (d430,d740,pc3000,d710,etc) " +
                    "instead of letting the resource mapper choose for you.")
 
