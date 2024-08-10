@@ -20,7 +20,8 @@ tourInstructions = "."
 class GLOBALS(object):
     SITE_URN = "urn:publicid:IDN+emulab.net+authority+cm"
     # Use kernel version required by free5gc: Ubuntu 18, kernel 5.0.0-23-generic
-    UBUNTU22_IMG = "urn:publicid:IDN+utah.cloudlab.us+image+insaneproject-PG0:Ubuntu22.04-DPDK22.11"
+    # UBUNTU22_IMG = "urn:publicid:IDN+utah.cloudlab.us+image+insaneproject-PG0:Ubuntu22.04-DPDK22.11"
+    UBUNTU18_IMG = "urn:publicid:IDN+emulab.net+image+reu2020:ubuntu1864std50023generic"
 
     # default type
     HWTYPE = "d430"
@@ -89,7 +90,7 @@ gNBCoreLink.addNode(open5gs)
 # Add node that will host Data Network
 data_net = request.RawPC("Data-Network")
 data_net.component_manager_id = GLOBALS.SITE_URN
-# data_net.disk_image = GLOBALS.UBUNTU22_IMG
+data_net.disk_image = GLOBALS.UBUNTU18_IMG
 data_net.hardware_type = GLOBALS.HWTYPE if params.phystype != "" else params.phystype
 # data_net.addService(rspec.Execute(shell="bash", command=invoke_script_str("data_net.sh")))
 gNBCoreLink.addNode(data_net)
